@@ -1,0 +1,7 @@
+.add-product{
+    width: 70%;
+    height: 100%;
+    background-color: rgb(246, 244, 244);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}

@@ -1,0 +1,20 @@
+.addprod-container{
+    border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: flex-end;
+    width: 97%;
+    margin: auto;
+    padding: 10px 0;
+}
+.addprod-container>button{
+    background-color: rgb(76, 205, 76);
+    color: white;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 500ms ease;
+    cursor: pointer;
+}
+.addprod-container>button:hover{
+    background-color: rgb(35, 158, 35);
+}
