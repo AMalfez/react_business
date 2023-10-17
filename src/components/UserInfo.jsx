@@ -1,12 +1,17 @@
 import React from 'react'
 import '../css/UserInfo.css'
+import { useAuth0 } from '@auth0/auth0-react'
 
 function UserInfo() {
+  const {user,isAuthenticated} = useAuth0();
+  
   return (
     <div className='userInfo'>
-      <div className='Avatar'><p>Avatar</p></div>
-      <div className='user-name'>Username</div>
-      <div className='user-email'>username1234@gmail.com</div>
+      <div className='Avatar'>
+        {!isAuthenticated? (<p>Avatar</p>):(<img src={user.picture} alt="user picture"/>)}
+      </div>
+      <div className='user-name'>{!isAuthenticated?("Username") :(user.given_name +" "+user.family_name)}</div>
+      <div className='user-email'>{!isAuthenticated?"user email":user.email}</div>
     </div>
   )
 }
